@@ -10,8 +10,8 @@ class Category(models.Model):
 class MenuItem(models.Model):
     title = models.CharField(max_length=255, db_index=True)
     price = models.DecimalField(max_digits=6, decimal_places=2, db_index=True)
-    stock = models.IntegerField()
-    price_after_tax = models.DecimalField(max_digits=5, decimal_places=2)
+    inventory = models.IntegerField(default=0)
+    price_after_tax = models.DecimalField(max_digits=5, decimal_places=2, default=0.0)
     category = models.ForeignKey(Category, on_delete=models.PROTECT)
     
     def __str__(self):

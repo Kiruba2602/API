@@ -17,7 +17,7 @@ class MenuItemSerializer(serializers.ModelSerializer):
         fields = ['id','title','price','stock', 'price_after_tax','category','category_id']
         extra_kwargs = {
             'price': {'min_value': 2},
-            'stock':{'source':'inventory', 'min_value': 0}
+            'stock':{'min_value': 0}
         }
         
     def calculate_tax(self, product:MenuItem):
