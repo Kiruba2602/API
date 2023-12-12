@@ -1,24 +1,14 @@
-from rest_framework import generics, status
+from rest_framework import generics
 from .models import MenuItem, Category
 from .serializers import MenuItemSerializer, CategorySerializer
-from rest_framework.response import Response
-from django.shortcuts import get_object_or_404
-from rest_framework import viewsets   
 
-class MenuItemListView(generics.ListCreateAPIView):
-    queryset = MenuItem.objects.all()
-    serializer_class = MenuItemSerializer
-
-class CategoryView(generics.ListCreateAPIView):
-    serializer_class = CategorySerializer
+class CategoriesView(generics.ListCreateAPIView):
     queryset = Category.objects.all()
+    serializer_class = CategorySerializer
 
-class MenuItemDetailView(generics.RetrieveUpdateDestroyAPIView):
+class MenuItemsView(generics.ListCreateAPIView):
     queryset = MenuItem.objects.all()
     serializer_class = MenuItemSerializer
-
-class MenuItemsViewSet(viewsets.ModelViewSet):
-    queryset = MenuItem.objects.all()
-    serializer_class = MenuItemSerializer
-    ordering_fields=['price','category']
-    search_fields = ['title','category__title']
+    ordering_fields = ['price', 'inventory']
+    filterset_fields = ['price', 'inventory']
+    search_fields = ['title']
