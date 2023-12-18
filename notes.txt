@@ -1,0 +1,15 @@
+Superuser:
+username: kiruba
+password: kiruba@260202
+
+Manager:
+username: Adrian
+password: littlelemon@adr!
+
+deliverycrew:
+
+username: Mario
+password: littlelemon@mar!
+
+username: Sana
+password: littlelemon@san!
