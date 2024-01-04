@@ -16,8 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework.authtoken.views import ObtainAuthToken
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('LittlelemonAPI.urls'))
+    path('api/', include('LittlelemonAPI.urls')),
+    path('auth/token/', ObtainAuthToken.as_view(), name='token_obtain'),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
 ]
