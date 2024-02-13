@@ -51,6 +51,6 @@ Delete a menu category
 DELETE /menu-categories/:id
 
 Technologies Used: 
-  DjangoRestFramework
-  REST API
-  db.SQLite
+  DjangoRestFramework,
+  REST API,
+  db.SQLite.
