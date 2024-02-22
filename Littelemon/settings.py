@@ -27,9 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://localhost:3000",
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
 
 
 # Application definition
@@ -43,9 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'LittlelemonAPI',
-    'djoser',
     'rest_framework.authtoken',
     'django_filters',
+    'corsheaders',  
 ]
 
 MIDDLEWARE = [
@@ -166,8 +166,4 @@ REST_FRAMEWORK = {
     },
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 30,
-}
-
-DJOSER = {
-    'USER_ID_FIELD' : 'username'
 }

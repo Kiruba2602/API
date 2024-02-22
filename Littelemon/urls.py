@@ -22,6 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('LittlelemonAPI.urls')),
     path('auth/token/', ObtainAuthToken.as_view(), name='token_obtain'),
-    path('auth/', include('djoser.urls')),
-    path('auth/', include('djoser.urls.authtoken')),
+    path('auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

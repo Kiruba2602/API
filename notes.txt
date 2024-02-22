@@ -13,3 +13,8 @@ password: littlelemon@mar!
 
 username: Sana
 password: littlelemon@san!
+
+public users:
+
+username: publicuser1
+password: PU123456789!

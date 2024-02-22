@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import MenuItem, Category, Rating, Order, OrderItem, Cart
-from rest_framework.validators import UniqueTogetherValidator 
+from rest_framework.validators import UniqueTogetherValidator, UniqueValidator 
 from django.contrib.auth.models import User
 from django.contrib.auth import get_user_model
 from django.contrib.auth.password_validation import validate_password
@@ -96,7 +96,7 @@ class OrderPutSerializer(serializers.ModelSerializer):
 User = get_user_model()
 
 class RegisterSerializer(serializers.ModelSerializer):
-    email = serializers.EmailField(required=True, validators=[serializers.UniqueValidator(queryset=User.objects.all())])
+    email = serializers.EmailField(required=True, validators=[UniqueValidator(queryset=User.objects.all())])
     password = serializers.CharField(write_only=True, required=True, validators=[validate_password])
     password2 = serializers.CharField(write_only=True, required=True)
 

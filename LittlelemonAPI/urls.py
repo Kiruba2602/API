@@ -1,6 +1,8 @@
 from django.urls import path, include
 from . import views
 from .views import RegisterView
+from rest_framework.authtoken.views import ObtainAuthToken
+
 urlpatterns = [
     path('menu-items', views.MenuItemsView.as_view()),
     path('menu-items/category', views.CategoriesView.as_view()),
@@ -14,4 +16,5 @@ urlpatterns = [
     path('orders/<int:pk>', views.SingleOrderView.as_view()),
     path('ratings', views.RatingView.as_view({'get':'list'})),
     path('register/', RegisterView.as_view(), name='register'),
+    path('login/', ObtainAuthToken.as_view(), name='obtain_token'),
 ]
