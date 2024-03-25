@@ -1,4 +1,4 @@
-Little Lemon API
+####Little Lemon API
 Welcome to the Little Lemon API! This is a RESTful API built with Node.js and Express that allows you to manage a virtual restaurant's menu.
 
 Getting Started
