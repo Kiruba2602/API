@@ -1,26 +1,28 @@
-Little Lemon API
+####Little Lemon API
 
 Welcome to the Little Lemon API! This is a RESTful API built with Node.js and Express that allows you to manage a virtual restaurant's menu.
 
-Getting Started
+##Getting Started
 
 To get started with the Little Lemon API, follow these steps:
 
-Clone the repository: git clone https://github.com/yourusername/little-lemon-api.git
+##Clone the repository: 
+git clone https://github.com/yourusername/little-lemon-api.git
 
-Install the dependencies: pip install requirements.txt
+#Install the dependencies: 
+pip install requirements.txt
 
-Start the server: 
-  python manage.py makemigrations
-  python manage.py migrate
-  python manage.py runserver
+#Start the server: 
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
 
 The API will be running on http://localhost:3000.
 
-Endpoints
-  Menu Items
-    Get all menu items
-    GET /menu-items
+##Endpoints
+#Menu Items
+Get all menu items
+GET /menu-items
 
 Get a single menu item
 GET /menu-items/:id
@@ -50,7 +52,7 @@ PUT /menu-categories/:id
 Delete a menu category
 DELETE /menu-categories/:id
 
-Technologies Used: 
+##Technologies Used: 
   DjangoRestFramework,
   REST API,
   db.SQLite.
