@@ -18,13 +18,13 @@ Before you begin, ensure you have the following installed:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/Kiruba2602/API/little-lemon-api.git
+https://github.com/Kiruba2602/Little-Lemon-API.git
 ```
 
 2. **Navigate to the project directory**
 
 ```bash
-cd little-lemon-api
+cd little-lemon-API
 ```
 
 3. **Install the dependencies**
